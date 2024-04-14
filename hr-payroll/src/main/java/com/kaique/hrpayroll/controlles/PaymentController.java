@@ -20,4 +20,6 @@ public class PaymentController {
 	public Payment getPayment(@PathVariable Long workerId, @PathVariable Integer days) {
 		return service.getPayment(workerId, days);
 	}
+
+
 }

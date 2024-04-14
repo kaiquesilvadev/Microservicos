@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.kaique.hrpayroll.controlles.PaymentController;
 import com.kaique.hrpayroll.entities.dto.Worker;
 
 @Component

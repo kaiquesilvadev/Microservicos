@@ -2,6 +2,7 @@ package com.kaique.hrpayroll;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
@@ -12,6 +13,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 
 //@RibbonClient(name = "hr-worker")
+
+/*
+A anotação @EnableCircuitBreaker é usada para habilitar o suporte ao Hystrix no Spring Boot. Ela é parte do Spring Cloud, uma extensão do Spring Boot que facilita a integração de aplicativos com serviços de nuvem.
+A partir do Spring Cloud Netflix versão 1.4.0, a anotação @EnableCircuitBreaker foi substituída pela anotação @EnableCircuitBreaker e @EnableHystrix.*/
 @EnableFeignClients
 @SpringBootApplication
 public class HrPayrollApplication {
