@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kaique.hroauth.dto.User;
-import com.kaique.hroauth.services.UserService;
+import com.kaique.hroauth.security.UserDetail;
+import com.kaique.hroauth.security.UserService;
 
 @RestController
 @RequestMapping("/users")
@@ -19,9 +19,9 @@ public class UserController {
 	private UserService service;
 	
 	@GetMapping(value = "/search")
-	public ResponseEntity<User> findByEmail(@RequestParam String email) {
+	public ResponseEntity<UserDetail> findByEmail(@RequestParam String email) {
 		try {
-			User user = service.findByEmail(email);
+			UserDetail user = (UserDetail) service.loadUserByUsername(email);
 			return ResponseEntity.ok(user);
 		}
 		catch (IllegalArgumentException e) {

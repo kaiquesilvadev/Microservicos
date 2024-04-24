@@ -1,4 +1,4 @@
-package com.kaique.hroauth.dto;
+package com.kaique.hroauth.security;
 
 public class Role {
 	
@@ -9,6 +9,7 @@ public class Role {
 	}
 
 	public Role(Long id, String roleName) {
+		super();
 		this.id = id;
 		this.roleName = roleName;
 	}
