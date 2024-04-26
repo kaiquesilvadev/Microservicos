@@ -64,6 +64,9 @@ public class AuthorizationServerConfig {
 
 	@Value("${security.jwt.duration}")
 	private Integer jwtDurationSeconds;
+	
+	@Value("${security.client}")
+	private String hostClient;
 
 	@Autowired
 	private UserDetailsService userDetailsService;
@@ -113,6 +116,7 @@ public class AuthorizationServerConfig {
 			.authorizationGrantType(new AuthorizationGrantType("password"))
 			.tokenSettings(tokenSettings())
 			.clientSettings(clientSettings())
+			.redirectUri(hostClient)
 			.build();
 		// @formatter:on
 
