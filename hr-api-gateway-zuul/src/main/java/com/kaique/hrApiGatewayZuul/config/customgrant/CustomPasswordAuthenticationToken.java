@@ -1,5 +1,4 @@
-package com.kaique.hroauth.config.customgrant;
-
+package com.kaique.hrApiGatewayZuul.config.customgrant;
 
 import java.util.Collections;
 import java.util.HashSet;

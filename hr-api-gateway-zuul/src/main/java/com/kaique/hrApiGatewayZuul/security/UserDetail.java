@@ -1,4 +1,4 @@
-package com.kaique.hroauth.security;
+package com.kaique.hrApiGatewayZuul.security;
 
 import java.util.Collection;
 import java.util.HashSet;

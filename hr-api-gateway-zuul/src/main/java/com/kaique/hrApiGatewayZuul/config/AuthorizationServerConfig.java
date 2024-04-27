@@ -1,4 +1,5 @@
-package com.kaique.hroauth.config.customgrant;
+package com.kaique.hrApiGatewayZuul.config;
+
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -44,10 +45,9 @@ import org.springframework.security.oauth2.server.authorization.token.OAuth2Toke
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenGenerator;
 import org.springframework.security.web.SecurityFilterChain;
 
-import com.kaique.hroauth.config.customgrant.CustomPasswordAuthenticationConverter;
-import com.kaique.hroauth.config.customgrant.CustomPasswordAuthenticationProvider;
-import com.kaique.hroauth.config.customgrant.CustomUserAuthorities;
-
+import com.kaique.hrApiGatewayZuul.config.customgrant.CustomPasswordAuthenticationConverter;
+import com.kaique.hrApiGatewayZuul.config.customgrant.CustomPasswordAuthenticationProvider;
+import com.kaique.hrApiGatewayZuul.config.customgrant.CustomUserAuthorities;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.JWKSource;
@@ -64,9 +64,6 @@ public class AuthorizationServerConfig {
 
 	@Value("${security.jwt.duration}")
 	private Integer jwtDurationSeconds;
-	
-	@Value("${security.client}")
-	private String hostClient;
 
 	@Autowired
 	private UserDetailsService userDetailsService;
@@ -116,7 +113,6 @@ public class AuthorizationServerConfig {
 			.authorizationGrantType(new AuthorizationGrantType("password"))
 			.tokenSettings(tokenSettings())
 			.clientSettings(clientSettings())
-			.redirectUri(hostClient)
 			.build();
 		// @formatter:on
 

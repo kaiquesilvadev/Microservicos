@@ -1,4 +1,4 @@
-package com.kaique.hroauth.config.customgrant;
+package com.kaique.hrApiGatewayZuul.config.customgrant;
 
 import java.util.Arrays;
 import java.util.HashMap;
