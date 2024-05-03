@@ -1,4 +1,4 @@
-package com.kaique.hrApiGatewayZuul.security;
+package com.kaique.authserver.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,19 +8,20 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.kaique.hrApiGatewayZuul.feignclient.UserFeignClient;
+import com.kaique.authserver.feignclient.UserFeignClient;
 
 @Service
 public class UserService implements UserDetailsService {
 
 	private static Logger logger = LoggerFactory.getLogger(UserDetail.class);
-	
-	//@Autowired
-	//private UserFeignClient userFeignClient;
+
+    @Autowired
+	private UserFeignClient userFeignClient;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		UserDetail user = null;
+		UserDetail user = userFeignClient.findByEmail(username);
+		logger.info(username);
 		if (user == null) {
 			logger.error("Email not found: " + username);
 			throw new UsernameNotFoundException("Email not found");

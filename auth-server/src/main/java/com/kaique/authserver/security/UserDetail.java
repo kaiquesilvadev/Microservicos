@@ -1,4 +1,4 @@
-package com.kaique.hrApiGatewayZuul.security;
+package com.kaique.authserver.security;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -9,16 +9,15 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-
 public class UserDetail implements UserDetails {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long id;
 	private String name;
 	private String email;
 	private String password;
 	private Set<Role> roles = new HashSet<>();
-	
+
 	public UserDetail() {
 	}
 
@@ -67,8 +66,7 @@ public class UserDetail implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return roles.stream().map(x -> new SimpleGrantedAuthority(x.getRoleName()))
-				.collect(Collectors.toList());
+		return roles.stream().map(x -> new SimpleGrantedAuthority(x.getRoleName())).collect(Collectors.toList());
 	}
 
 	@Override

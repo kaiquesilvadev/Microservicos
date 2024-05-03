@@ -1,4 +1,4 @@
-package com.kaique.hrApiGatewayZuul.config.customgrant;
+package com.kaique.authserver.config.customgrant;
 
 
 import java.util.Collection;

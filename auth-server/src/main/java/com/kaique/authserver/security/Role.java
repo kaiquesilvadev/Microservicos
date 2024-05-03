@@ -1,4 +1,4 @@
-package com.kaique.hrApiGatewayZuul.security;
+package  com.kaique.authserver.security;
 
 
 public class Role {
