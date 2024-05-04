@@ -39,9 +39,12 @@ public class ResourceServerConfig {
 
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+    	
+    	http.csrf( csrf -> csrf.disable());
         http
             .authorizeExchange(exchanges -> exchanges
-                .anyExchange().permitAll()
+            		   .pathMatchers("/oauth2/token").permitAll() 
+                       .anyExchange().authenticated() 
             )
             .oauth2ResourceServer(oauth2 -> oauth2
                 .jwt(Customizer.withDefaults())
