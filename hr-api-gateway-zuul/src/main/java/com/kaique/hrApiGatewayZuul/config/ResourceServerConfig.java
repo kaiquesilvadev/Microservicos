@@ -29,7 +29,7 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 @EnableWebFluxSecurity
 @EnableMethodSecurity
-public class ResourceServerConfig {
+public class ResourceServerConfig{
     
     @Value("${key.location}")
     RSAPublicKey key;
@@ -43,7 +43,7 @@ public class ResourceServerConfig {
     	http.csrf( csrf -> csrf.disable());
         http
             .authorizeExchange(exchanges -> exchanges
-            		   .pathMatchers("/oauth2/token").permitAll() 
+            		   .pathMatchers("/auth-server/oauth2/token**").permitAll() 
                        .anyExchange().authenticated() 
             )
             .oauth2ResourceServer(oauth2 -> oauth2
@@ -69,16 +69,6 @@ public class ResourceServerConfig {
         jwtConverter.setJwtGrantedAuthoritiesConverter(new JwtGrantedAuthoritiesConverter());
 
         return new ReactiveJwtAuthenticationConverterAdapter(jwtConverter);
-    }
-
-    @Bean
-    public MapReactiveUserDetailsService userDetailsService() {
-        UserDetails user = User.withDefaultPasswordEncoder()
-            .username("user")
-            .password("user")
-            .roles("USER")
-            .build();
-        return new MapReactiveUserDetailsService(user);
     }
 
     @Bean
