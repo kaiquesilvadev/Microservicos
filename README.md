@@ -83,3 +83,26 @@ Esta imagem apresenta um modelo conceitual da arquitetura do sistema, mostrando 
 
 Essa imagem fornece uma representação visual do modelo conceitual do sistema, ajudando a entender sua estrutura e organização geral.
 
+## Testando o Sistema com Postman
+
+Para facilitar o teste e a interação com o sistema no ambiente do Postman. Siga as instruções abaixo para começar a usar:
+
+1. **Faça o Download dos Arquivos:**
+   - [MS_Course_postman_collection.json](https://github.com/kaiquesilvadev/Microsservicos/blob/main/MS_Course_postman_collection.json)
+   - [MS_Course_env_postman_environment.json](https://github.com/kaiquesilvadev/Microsservicos/blob/main/MS_Course_env_postman_environment.json)
+
+2. **Importe a Coleção e o Ambiente no Postman:**
+   - No Postman, clique em "Importar" e selecione o arquivo `MS_Course_postman_collection.json` para importar a coleção.
+   - Em seguida, clique em "Importar" novamente e selecione o arquivo `MS_Course_env_postman_environment.json` para importar o ambiente.
+
+3. **Configure o Ambiente:**
+   - Selecione o ambiente "MS_Course" na lista suspensa de ambientes no canto superior direito do Postman.
+   - Certifique-se de configurar corretamente as variáveis de ambiente, como URL base, token de autenticação, etc.
+
+
+## Leitura Recomendada
+
+- **Microservices – a definition of this new architectural term**  
+  Martin Fowler apresenta uma definição detalhada do termo "Microservices" e discute os princípios fundamentais, benefícios e desafios dessa arquitetura.  
+  [Leia o artigo](https://martinfowler.com/articles/microservices.html)
+
