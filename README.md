@@ -83,6 +83,16 @@ Esta imagem apresenta um modelo conceitual da arquitetura do sistema, mostrando 
 
 Essa imagem fornece uma representação visual do modelo conceitual do sistema, ajudando a entender sua estrutura e organização geral.
 
+## Pré-requisitos
+
+Antes de começar, certifique-se de ter os seguintes pré-requisitos:
+
+- **Conhecimento básico de Spring Boot:** É recomendado ter familiaridade com o framework Spring Boot para entender melhor os exemplos e os conceitos abordados neste projeto.
+
+- **JDK 17:** É necessário ter o JDK 17 instalado no seu sistema. Certifique-se de configurar corretamente as variáveis de ambiente `JAVA_HOME` e incluir o JDK no `PATH`.
+
+- **STS - Spring Tool Suite:** Embora não seja obrigatório, o uso do Spring Tool Suite (STS) pode facilitar o desenvolvimento de aplicativos Spring Boot. Você pode baixar o STS em [https://spring.io/tools](https://spring.io/tools).
+
 ## Testando o Sistema com Postman
 
 Para facilitar o teste e a interação com o sistema no ambiente do Postman. Siga as instruções abaixo para começar a usar:
