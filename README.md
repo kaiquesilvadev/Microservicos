@@ -37,3 +37,20 @@ O objetivo deste repositório é fornecer exemplos práticos , testar e implemen
    - Serviço de gerenciamento de trabalhadores com Actuator para atualização de configurações em runtime.
    - [Ver diretório hr-worker](./hr-worker)
 
+## Visão Geral do Sistema
+
+![Visão Geral do Sistema](https://github.com/kaiquesilvadev/Microsservicos/blob/main/img/Vis%C3%A3o%20geral%20do%20sistema.png)
+
+Esta imagem apresenta uma visão geral da arquitetura do sistema, destacando a interação entre os diferentes componentes e serviços. Aqui estão algumas das principais funcionalidades e componentes representados:
+
+- **API Gateway:** Representado como o ponto de entrada para todas as solicitações do cliente. Ele roteia as solicitações para os serviços apropriados e também pode realizar funções de autenticação, autorização, monitoramento e logging.
+  
+- **Serviços de Microservices:** Os serviços individuais implementam diferentes partes da lógica de negócios. Eles são independentes, escaláveis e podem ser desenvolvidos, implantados e dimensionados independentemente uns dos outros.
+
+- **Banco de Dados:** Representado como um componente central que armazena os dados necessários para o funcionamento do sistema. Pode incluir bancos de dados relacionais, NoSQL, cache de dados e outros sistemas de armazenamento.
+
+- **Servidor de Configuração:** Responsável por armazenar e fornecer as configurações do sistema para os serviços. Ele permite uma configuração centralizada e dinâmica dos serviços, facilitando a manutenção e a escalabilidade do sistema.
+
+- **Servidor de Autenticação e Autorização:** Gerencia o processo de autenticação e autorização dos usuários, garantindo que apenas usuários autorizados tenham acesso aos recursos protegidos.
+
+Esta imagem fornece uma visão geral visual do sistema, ajudando a compreender a interação e a arquitetura geral do sistema de microservices.
