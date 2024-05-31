@@ -1,4 +1,4 @@
-# Microservices com Java
+# MicroServicos com Java
 
 Bem-vindo ao repositório **Microservices com Java**! Este projeto tem como objetivo explorar e exemplificar a arquitetura de microservices utilizando a linguagem Java. O foco principal deste repositório não é implementar lógicas de negócios complexas, mas sim entender e praticar os conceitos fundamentais da arquitetura de microservices de maneira clara e objetiva.
 
